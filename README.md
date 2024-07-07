@@ -15,8 +15,8 @@ Go-based HTTP server that fetches and display live cricket score.It retrieves da
 - Clone or Download this Repo
 
 ```sh
-git clone https://github.com/mskian/live-cricket-score-server.git
-cd live-cricket-score-server
+git clone https://github.com/mskian/live-score-server.git
+cd live-score-server
 ```
 
 - Create a `config.yaml` file in the project root with the Cricket Score API URL
