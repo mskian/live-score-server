@@ -126,7 +126,7 @@ func validateScore(score LiveScore) error {
 
 func formatScore(score *LiveScore) string {
 	result := fmt.Sprintf(
-		"\n\nMatch Details:\n\n  Title: %s\n  Update: %s\n  Live Score: %s\n  Match Date: %s\n  Run Rate: %s\n\n",
+		"\n\n Match Details:\n\n   Title: %s\n   Update: %s\n   Live Score: %s\n   Match Date: %s\n   Run Rate: %s\n\n",
 		escapeText(score.Title),
 		escapeText(score.Update),
 		escapeText(score.LiveScore),
@@ -134,10 +134,10 @@ func formatScore(score *LiveScore) string {
 		escapeText(score.RunRate),
 	)
 
-	result += "Current Batsmen:\n\n"
+	result += " Current Batsmen:\n\n"
 	for _, batsman := range score.CurrentBatsmen {
 		result += fmt.Sprintf(
-			"  - Name: %s\n    Runs: %s\n    Balls: %s\n    Strike Rate: %s\n\n",
+			"   - Name: %s\n     Runs: %s\n     Balls: %s\n     Strike Rate: %s\n\n",
 			escapeText(batsman.Name),
 			escapeText(batsman.Runs),
 			escapeText(batsman.Balls),
@@ -145,10 +145,10 @@ func formatScore(score *LiveScore) string {
 		)
 	}
 
-	result += "Current Bowlers:\n\n"
+	result += " Current Bowlers:\n\n"
 	for _, bowler := range score.CurrentBowler {
 		result += fmt.Sprintf(
-			"  - Name: %s\n    Overs: %s\n    Runs: %s\n    Wickets: %s\n\n",
+			"   - Name: %s\n     Overs: %s\n     Runs: %s\n     Wickets: %s\n\n",
 			escapeText(bowler.Name),
 			escapeText(bowler.Overs),
 			escapeText(bowler.Runs),
